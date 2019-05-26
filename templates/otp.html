@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title> Flutterwave Test </title>
+{% endblock %}
+{% block body %}
+<div class="content-section-b">
+    <div class="text-center wrap_title">
+        <h4>CONFIRM OTP</h4>
+    </div>
+    {% from "includes/_formhelpers.html" import render_field %}
+    <div>
+        {% include 'includes/_messages.html' %}
+        <form action="/otp" method="POST">
+            <div class="form-group input-group">
+                {{render_field(form.otpText, class="form-control")}}
+                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil form-control-feedback"></i></span>
+            </div>
+            <input type="submit" class="btn btn-primary pull-right" value="Submit">
+        </form>
+        {% if error %}
+        <div class="row col-md-9">
+            <p class="error text text-danger">{{ error }}</p>
+        </div>
+        {% endif %}
+        {% if success %}
+        <div class="row col-md-9">
+            <p class="error text text-success">{{ success }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

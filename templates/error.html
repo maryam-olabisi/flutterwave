@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title> Flutterwave Test </title>
+{% endblock %}
+{% block body %}
+<div class="content-section-b">
+    <div class="text-center wrap_title">
+        <h6>Error</h6>
+    </div>
+    {% from "includes/_formhelpers.html" import render_field %}
+    <div>
+        {% include 'includes/_messages.html' %}
+        {% if error %}
+        <div class="row col-md-9">
+            <p class="error text text-danger">{{ error }}</p>
+        </div>
+        {% endif %}
+        {% if success %}
+        <div class="row col-md-9">
+            <p class="error text text-success">{{ success }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

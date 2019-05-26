@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="author" content="Muritadha Maryam O.">
+        {% block title %}
+         
+        {% endblock %}
+        <link href="../static/css/mycss.css" rel="stylesheet">
+        <link href="../static/css/bootstrap.css" rel="stylesheet">
+        <link href="../static/css/style.css" rel="stylesheet">
+        <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="../static/js/modernizr-2.8.3.min.js"></script> 
+    </head>
+
+    <body>
+        <nav class="navbar-default" role="navigation">
+            <div style="margin: 0 auto;padding: 5px 50px;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">HOME</a>
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">	
+                        <li class="menuItem"><a href="/verify">Verify</a></li>
+                        <li class="menuItem"><a href="/payment">Pay For Ride</a></li>
+                        <li class="menuItem"><a href="#">My Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <div class="footer" style="border-top: solid 1px">
+                <p class="col-md-4"> &copy; Muritadha Maryam Olabisi</p>
+                <p class="col-md-4 text-center"> m.olabisimurit@gmail.com</p>
+                <p class="col-md-4" style="float:right;"> +2348163878012</p>
+            </div>
+        </div>
+    </body>
+</html>

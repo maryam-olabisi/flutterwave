@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title> SUCCESS - Flutterwave Test </title>
+{% endblock %}
+{% block body %}
+<div class="content-section-b">
+    {% if iframe %}
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{iframe}}"></iframe>
+    </div>
+    {% endif %}
+    <div class="text-center wrap_title">
+        <h4 text text-success>PAYMENT SUCCESSFUL!</h4>
+    </div>
+    <div>
+        <p class="alert alert-success">LAGOS RIDES: N100.00<br>INDEPENDENT DRIVER: N900.00<br>TOTAL: N1000.00</p>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Recipient</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Lagos Rides</td>
+                <td>N100.00</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Ind. Driver @FastMan007</td>
+                <td>N900.00</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+{% endblock %}
